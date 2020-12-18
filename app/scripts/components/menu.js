@@ -24,7 +24,7 @@ export default class Menu extends React.Component {
      * @memberof Menu
      * @param e [Object] - the event from a click handler
      */
-    showSearchContainer(e) {
+    toggleSearchContainer(e) {
         e.preventDefault();
         this.setState({
             showingSearch: !this.state.showingSearch
@@ -62,19 +62,19 @@ export default class Menu extends React.Component {
                             <a href="#" className="nav-item">STORES</a>
                             <a href="#" className="nav-item">INSPIRATION</a>
 
-                            <a href="#" onClick={(e) => this.showSearchContainer(e)}>
+                            <a href="#" onClick={(e) => this.toggleSearchContainer(e)}>
                                 <i className="material-icons search">search</i>
                             </a>
                         </nav>
                     </div>
                 </div>
-                <div className={(this.state.showingSearch ? "showing " : "") + "search-container"}>
-                    <input aria-label="Type to search products" placeholder="Search" type="text" onChange={(e) => this.onSearch(e)} />
-                    <a href="#" onClick={(e) => this.showSearchContainer(e)}>
+                {this.state.showingSearch && <div className="search-container">
+                    <input autoFocus aria-label="Type to search products" placeholder="Search" type="text" onChange={(e) => this.onSearch(e)} />
+                    <a href="#" onClick={(e) => this.toggleSearchContainer(e)}>
                         <i className="material-icons close">close</i>
                     </a>
                     <ProductList/>
-                </div>
+                </div>}
             </header>
         );
     }

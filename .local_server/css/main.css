@@ -16,9 +16,7 @@ header.menu div.menu-container nav i.search { position: absolute; right: 10px; t
 
 header.menu div.menu-container nav a.nav-item { font-size: 17px; line-height: 70px; text-transform: uppercase; text-decoration: none; white-space: nowrap; border-bottom: 1px solid transparent; color: #fff; margin-right: 20px; }
 
-header.menu div.search-container { position: absolute; background-color: white; z-index: 20; -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); width: 100%; padding: 20px; border-bottom: 1px solid #ccc; display: none; }
-
-header.menu div.search-container.showing { display: block; }
+header.menu div.search-container { position: absolute; background-color: white; z-index: 20; -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); width: 100%; padding: 20px; border-bottom: 1px solid #ccc; }
 
 header.menu div.search-container input[type="text"] { width: 100%; font-size: 36px; line-height: 50px; border: 1px solid #ccc; padding: 0 10px; }
 
@@ -45,7 +43,7 @@ section#home div.content { color: #fff; text-align: left; }
 
 .product_price { font-size: 14px; font-weight: bold; }
 
-.product_buy { text-transform: uppercase; background-color: black; color: white; font-weight: bolder; min-height: 30px; min-width: 100px; }
+.product_buy { text-transform: uppercase; background-color: black; color: white; font-weight: bolder; min-height: 30px; min-width: 100px; padding: 5px 15px; }
 
 .product_buy:not([disabled]) { cursor: pointer; }
 

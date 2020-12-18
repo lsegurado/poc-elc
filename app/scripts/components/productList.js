@@ -18,7 +18,7 @@ class ProductList extends React.Component {
             pageStart={0}
             loadMore={(pageNumber) => ProductsStore.fetchMoreProducts(pageNumber)}
             hasMore={ProductsStore.hasMoreProducts}
-            useWindow={true} id="productList">
+            useWindow={true} className="productList">
             {ProductsStore.products.map(x => <Product key={x._id} {...x} />)}
         </InfiniteScroll>
     }

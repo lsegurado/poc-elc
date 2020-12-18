@@ -1,0 +1,11 @@
+.productList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  color: black;
+  background-color: white;
+  min-width: 100%;
+  min-height: 100%;
+}

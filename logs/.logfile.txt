@@ -1,2 +1,41 @@
 :::: Log File ::::
 
+
+[17/12/2020 -- 23:32]  Info task started
+[17/12/2020 -- 23:33]  Sass ran on files
+[17/12/2020 -- 23:45]  Info task started
+[17/12/2020 -- 23:46]  Scripts ran on main.js
+[17/12/2020 -- 23:46]  Scripts ran on main.js
+[17/12/2020 -- 23:49]  Scripts ran on main.js
+[17/12/2020 -- 23:49]  Scripts ran on main.js
+[17/12/2020 -- 23:50]  Scripts ran on main.js
+[17/12/2020 -- 23:50]  Scripts ran on main.js
+[17/12/2020 -- 23:50]  Scripts ran on main.js
+[17/12/2020 -- 23:51]  Scripts ran on main.js
+[17/12/2020 -- 23:52]  Scripts ran on main.js
+[17/12/2020 -- 23:53]  Scripts ran on main.js
+[17/12/2020 -- 23:55]  Scripts ran on main.js
+[17/12/2020 -- 23:55]  Scripts ran on main.js
+[17/12/2020 -- 23:55]  Scripts ran on main.js
+[17/12/2020 -- 23:56]  Scripts ran on main.js
+[17/12/2020 -- 23:56]  Scripts ran on main.js
+[17/12/2020 -- 23:57]  Scripts ran on main.js
+[17/12/2020 -- 23:57]  Scripts ran on main.js
+[17/12/2020 -- 23:58]  Scripts ran on main.js
+[17/12/2020 -- 23:59]  Scripts ran on main.js
+[18/12/2020 -- 0:2]  Scripts ran on main.js
+[18/12/2020 -- 0:2]  Sass ran on files
+[18/12/2020 -- 0:6]  Scripts ran on main.js
+[18/12/2020 -- 0:6]  Sass ran on files
+[18/12/2020 -- 0:6]  Info task started
+[18/12/2020 -- 9:43]  Info task started
+[18/12/2020 -- 9:44]  Scripts ran on main.js
+[18/12/2020 -- 9:45]  Scripts ran on main.js
+[18/12/2020 -- 9:45]  Scripts ran on main.js
+[18/12/2020 -- 9:47]  Scripts ran on main.js
+[18/12/2020 -- 9:49]  Scripts ran on main.js
+[18/12/2020 -- 9:49]  Scripts ran on main.js
+[18/12/2020 -- 10:4]  Scripts ran on main.js
+[18/12/2020 -- 10:4]  Scripts ran on main.js
+[18/12/2020 -- 10:4]  Scripts ran on main.js
+[18/12/2020 -- 10:5]  Scripts ran on main.js

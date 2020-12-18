@@ -25,18 +25,18 @@ class ProductsStore {
     */
     @action
     setSearchText(newSearchText) {
-        if (newSearchText) {
-            this.waitUntilFinishesWriting(() => {
+        this.waitUntilFinishesWriting(() => {
+            if (newSearchText) {
                 productsApiHelper.getProducts(newSearchText, this.pageSize, 0).then(result => {
                     this.hasMoreProducts = result.hasMoreProducts;
                     this.products = result.products;
                     this.searchText = newSearchText;
                 })
-            })
-        } else {
-            this.products = [];
-            this.searchText = newSearchText;
-        }
+            } else {
+                this.products = [];
+                this.searchText = newSearchText;
+            }
+        })
     }
 
     /**

@@ -14,13 +14,19 @@ class ProductList extends React.Component {
      * @memberof ProductList
     */
     render() {
-        return ProductsStore.products.length > 0 && <InfiniteScroll
-            pageStart={0}
-            loadMore={(pageNumber) => ProductsStore.fetchMoreProducts(pageNumber)}
-            hasMore={ProductsStore.hasMoreProducts}
-            useWindow={true} className="productList">
-            {ProductsStore.products.map(x => <Product key={x._id} {...x} />)}
-        </InfiniteScroll>
+        const hasProducts = ProductsStore.products && ProductsStore.products.length > 0;
+        if (ProductsStore.searchText !== "" && !hasProducts) {
+            return <span className="noProductsFound">No results found. We suggest double-checking the spelling or searching for a similar term.</span>
+        } else if (hasProducts) {
+            return <InfiniteScroll
+                pageStart={0}
+                loadMore={(pageNumber) => ProductsStore.fetchMoreProducts(pageNumber)}
+                hasMore={ProductsStore.hasMoreProducts}
+                useWindow={true} className="productList">
+                {ProductsStore.products.map(x => <Product key={x._id} {...x} />)}
+            </InfiniteScroll>
+        }
+        return null;
     }
 }
 

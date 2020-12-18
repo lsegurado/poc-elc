@@ -3,8 +3,10 @@
  * 
  */
 import React from 'react';
+import productsStore from '../store/productsStore';
+import ProductList from './productList';
 
-class Menu extends React.Component {
+export default class Menu extends React.Component {
 
     /**
      * Main constructor for the Menu Class
@@ -35,18 +37,15 @@ class Menu extends React.Component {
      * @param e [Object] - the event from a text change handler
      */
     onSearch(e) {
-        
-        // Start Here
-        // ...
-        
-
+        e.preventDefault();
+        productsStore.setSearchText(e.target.value);
     }
 
     /**
-     * Renders the default app in the window, we have assigned this to an element called root.
+     * Renders the default menu of the app.
      * 
      * @returns JSX
-     * @memberof App
+     * @memberof Menu
     */
     render() {
         return (
@@ -56,7 +55,7 @@ class Menu extends React.Component {
                         <h1>ELC</h1>
                         <nav>
                             <a href="#" className="nav-item">HOLIDAY</a>
-                            <a href="#" className="nav-item">WHAT'S NEW</a>
+                            <a href="#" className="nav-item">WHAT&apos;S NEW</a>
                             <a href="#" className="nav-item">PRODUCTS</a>
                             <a href="#" className="nav-item">BESTSELLERS</a>
                             <a href="#" className="nav-item">GOODBYES</a>
@@ -70,10 +69,11 @@ class Menu extends React.Component {
                     </div>
                 </div>
                 <div className={(this.state.showingSearch ? "showing " : "") + "search-container"}>
-                    <input type="text" onChange={(e) => this.onSearch(e)} />
+                    <input aria-label="Type to search products" placeholder="Search" type="text" onChange={(e) => this.onSearch(e)} />
                     <a href="#" onClick={(e) => this.showSearchContainer(e)}>
                         <i className="material-icons close">close</i>
                     </a>
+                    <ProductList/>
                 </div>
             </header>
         );
@@ -81,6 +81,3 @@ class Menu extends React.Component {
 
 
 }
-
-// Export out the React Component
-module.exports = Menu;

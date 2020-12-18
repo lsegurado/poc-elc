@@ -1,4 +1,4 @@
-var data = [
+export default [
     {
         "_id": "001",
         "isActive": "true",
@@ -251,5 +251,3 @@ var data = [
         ]
     }
 ];
-
-module.exports = data;

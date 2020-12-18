@@ -12,6 +12,8 @@
  * 
  * Firstly we need to import the React JS Library
  */
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -32,7 +34,7 @@ class App extends React.Component {
     */
     render() {
         return (
-            <div className="App">
+            <div className="app">
                 <Menu />
                 <Home />
             </div>

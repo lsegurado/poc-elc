@@ -127,7 +127,7 @@ gulp.task('server', function() {
         // the script to run the app
         script: 'server/app.js',
         // this listens to changes in any of these files/routes and restarts the application
-        watch: ["server/app.js"],
+        watch: ["server/*.js"],
         ext: 'js'
     })
     .on('restart', function () {

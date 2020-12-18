@@ -5,7 +5,7 @@
 import React from 'react';
 
 
-class Home extends React.Component {
+export default class Home extends React.Component {
 
     /**
      * Renders the default app in the window, we have assigned this to an element called root.
@@ -22,9 +22,4 @@ class Home extends React.Component {
             </section>
         );
     }
-
-
 }
-
-// Export out the React Component
-module.exports = Home;

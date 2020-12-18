@@ -11,6 +11,7 @@ class ProductsStore {
     @observable searchText = '';
     @observable hasMoreProducts = false;
     pageSize = 10;
+    typingTimer;
 
     constructor() {
         makeObservable(this);
@@ -25,10 +26,12 @@ class ProductsStore {
     @action
     setSearchText(newSearchText) {
         if (newSearchText) {
-            productsApiHelper.getProducts(newSearchText, this.pageSize, 0).then(result => {
-                this.hasMoreProducts = result.hasMoreProducts;
-                this.products = result.products;
-                this.searchText = newSearchText;
+            this.waitUntilFinishesWriting(() => {
+                productsApiHelper.getProducts(newSearchText, this.pageSize, 0).then(result => {
+                    this.hasMoreProducts = result.hasMoreProducts;
+                    this.products = result.products;
+                    this.searchText = newSearchText;
+                })
             })
         } else {
             this.products = [];
@@ -48,6 +51,17 @@ class ProductsStore {
             this.hasMoreProducts = result.hasMoreProducts;
             this.products = this.products.concat(result.products);
         })
+    }
+
+    /**
+     * Wait for another input to avoid unnecessary api calls.
+     * 
+     * @param callback [Function] - callback to call after the timeout
+     * @memberof ProductsStore
+    */
+    waitUntilFinishesWriting(callback) {
+        clearTimeout(this.typingTimer);
+        this.typingTimer = setTimeout(callback, 500);//Wait 1/2 second
     }
 }
 
